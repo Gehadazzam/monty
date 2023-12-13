@@ -34,10 +34,7 @@ void my_pint(stack_t **first, unsigned int num)
 	if (*first == NULL)
 {
 		fprintf(stderr, "L%u: can't pint, stack empty\n", num);
-		fclose(args.file);
-		free(args.buf);
-		stack_free(*first);
-		exit(EXIT_FAILURE);
+		error(first);
 	}
 	printf("%d\n", (*first)->n);
 }

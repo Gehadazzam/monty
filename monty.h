@@ -65,4 +65,8 @@ void my_pall(stack_t **first, unsigned int num);
 void my_pint(stack_t **first, unsigned int num);
 /*check.c*/
 int check_func(char *buf, stack_t **stack, unsigned int count, int file_d);
+/*pop.c*/
+void mypop(stack_t **first, unsigned int num);
+/*error.c*/
+void error(stack_t **first);
 #endif

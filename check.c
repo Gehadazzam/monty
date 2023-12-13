@@ -13,6 +13,7 @@ instruction_t func[] = {
 {"push", mypush},
 {"pall", my_pall},
 {"pint", my_pint},
+{"pop", mypop},
 {NULL, NULL}
 };
 	unsigned int x = 0;
