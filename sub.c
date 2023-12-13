@@ -11,7 +11,7 @@ void stack_sub(stack_t **first, unsigned int num)
 
 	if (*first == NULL || first == NULL || (*first)->next == NULL)
 	{
-		fprintf(stderr, "L%d: can't add, stack too short\n", num);
+		fprintf(stderr, "L%d: can't sub, stack too short\n", num);
 		error(first);
 	}
 	current = *first;
