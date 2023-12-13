@@ -76,4 +76,5 @@ void f_nop(stack_t **first, unsigned int num);
 void f_swap(stack_t **first, unsigned int num);
 void stack_sub(stack_t **first, unsigned int num);
 void stack_div(stack_t **first, unsigned int num);
+void stack_mul(stack_t **first, unsigned int num);
 #endif
