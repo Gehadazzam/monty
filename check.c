@@ -11,20 +11,14 @@ int check_func(char *buf, stack_t **stack, unsigned int count, int file_d)
 {
 instruction_t func[] = {
 {"push", mypush},
-{"pall", my_pall},
-{"pint", my_pint},
-{"pop", mypop},
-{"add", stack_add},
-{"nop", f_nop},
-{"swap", f_swap},
-{"sub", stack_sub},
-{"div", stack_div},
-{"mul", stack_mul},
-{"mod", stack_mod},
-{"pchar", stack_pchar},
-{"pstr", stack_pstr},
-{"stack", f_stack},
-{"queue", f_queue},
+{"pall", my_pall}, {"pint", my_pint},
+{"pop", mypop}, {"add", stack_add},
+{"nop", f_nop}, {"swap", f_swap},
+{"sub", stack_sub}, {"div", stack_div},
+{"mul", stack_mul}, {"mod", stack_mod},
+{"pchar", stack_pchar}, {"pstr", stack_pstr},
+{"stack", f_stack}, {"queue", f_queue},
+{"rotl", stack_rotl}, {"rotr", stack_rotr},
 {NULL, NULL}
 };
 	unsigned int x = 0;

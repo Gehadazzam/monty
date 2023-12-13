@@ -10,6 +10,7 @@
 *struct arguments - stuct holds the arguments
 *@file: pointer to file
 *@buf: pointer to char to hold the command
+*@lilo: hold sign to defer stack and queue
 */
 typedef struct arguments
 {
@@ -84,4 +85,7 @@ void stack_pstr(stack_t **first, unsigned int num);
 
 void f_stack(stack_t **first, unsigned int num);
 void f_queue(stack_t **first, unsigned int num);
+
+void stack_rotl(stack_t **first, unsigned int num);
+void stack_rotr(stack_t **first, unsigned int num);
 #endif

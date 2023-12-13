@@ -8,6 +8,7 @@ void stack_add(stack_t **first, unsigned int num)
 {
 	int sum;
 	stack_t *current = *first;
+
 	if (*first == NULL || first == NULL || (*first)->next == NULL)
 	{
 		fprintf(stderr, "L%d: can't add, stack too short\n", num);

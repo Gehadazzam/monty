@@ -6,7 +6,7 @@
 void error(stack_t **first)
 {
 	if (args.file != NULL)
-        fclose(args.file);
+		fclose(args.file);
 	if (args.buf != NULL)
 		free(args.buf);
 	if (*first != NULL)
