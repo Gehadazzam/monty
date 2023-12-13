@@ -16,6 +16,7 @@ instruction_t func[] = {
 {"pop", mypop},
 {"add", stack_add},
 {"nop", f_nop},
+{"swap", f_swap},
 {NULL, NULL}
 };
 	unsigned int x = 0;
