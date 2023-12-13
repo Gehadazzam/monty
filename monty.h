@@ -79,4 +79,5 @@ void stack_div(stack_t **first, unsigned int num);
 void stack_mul(stack_t **first, unsigned int num);
 void stack_mod(stack_t **first, unsigned int num);
 void stack_pchar(stack_t **first, unsigned int num);
+void stack_pstr(stack_t **first, unsigned int num);
 #endif

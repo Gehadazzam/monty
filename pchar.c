@@ -17,3 +17,21 @@ void stack_pchar(stack_t **first, unsigned int num)
 }
 	printf("%c\n", (*first)->n);
 }
+/**
+*stack_pstr - print string
+*@first: pointer of pointer to the stack
+*
+*@num: void int
+*/
+void stack_pstr(stack_t **first, unsigned int num)
+{
+(void) num;
+	while (*first)
+{
+		if ((*first)->n > 127 || (*first)->n < 0)
+			break;
+		printf("%c", (*first)->n);
+	*first = (*first)->next;
+}
+	printf("\n");
+}

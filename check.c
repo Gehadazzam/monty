@@ -22,6 +22,7 @@ instruction_t func[] = {
 {"mul", stack_mul},
 {"mod", stack_mod},
 {"pchar", stack_pchar},
+{"pstr", stack_pstr},
 {NULL, NULL}
 };
 	unsigned int x = 0;
