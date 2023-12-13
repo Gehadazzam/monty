@@ -24,7 +24,7 @@ args_t *args;
 	file = fdopen(file_d, "r");
 	if (file == NULL)
 {
-		fprintf(stderr, "Error: fdopen failed\n");
+		fprintf(stderr, "Error: can't open file %s\n", argv[1]);
 		close(file_d), exit(EXIT_FAILURE);
 }
 	args = malloc(sizeof(args_t));
