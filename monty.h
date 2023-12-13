@@ -70,4 +70,6 @@ int check_func(char *buf, stack_t **stack, unsigned int count, int file_d);
 void mypop(stack_t **first, unsigned int num);
 /*error.c*/
 void error(stack_t **first);
+
+void f_nop(stack_t **first, unsigned int num);
 #endif
