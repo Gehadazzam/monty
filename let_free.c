@@ -6,7 +6,6 @@
 */
 void free_args(args_t *args)
 {
-	free(args->argum);
 	free(args->buf);
 	free(args->file);
 }
@@ -39,7 +38,7 @@ void free_all(char *buf, stack_t *stack, args_t *args, FILE *file, int file_d)
 	stack_free(stack);
 	close(file_d);
 	fclose(file);
-	free_args(args);
+	/*free_args(args);*/
 	free(args);
 	buf = NULL;
 	stack = NULL;

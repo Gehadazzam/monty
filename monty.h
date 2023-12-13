@@ -10,13 +10,11 @@
 *struct arguments - stuct holds the arguments
 *@file: pointer to file
 *@buf: pointer to char to hold the command
-*@argum: another char
 */
 typedef struct arguments
 {
 FILE *file;
 char *buf;
-char *argum;
 } args_t;
 extern args_t args;
 
