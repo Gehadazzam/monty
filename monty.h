@@ -55,6 +55,7 @@ void mypush(stack_t **first, unsigned int num);
 /*add.c*/
 void node_add(stack_t **first, int num);
 void queue_add(stack_t **first, int num);
+void stack_add(stack_t **first, unsigned int num);
 
 /*let_free.c*/
 void free_all(char *buf, stack_t *stack, args_t *args, FILE *file, int file_d);

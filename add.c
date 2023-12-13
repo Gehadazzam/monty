@@ -1,5 +1,31 @@
 #include "monty.h"
 /**
+*stack_add - add top two elements of the stack
+*@first: pointer of pointer to the stack
+*@num: integer to be addes
+*/
+void stack_add(stack_t **first, unsigned int num)
+{
+	int sum, length = 0;
+	stack_t *current = *first;
+
+	while (current)
+	{
+		current = current->next;
+		length++;
+	}
+	if (length < 2)
+	{
+		fprintf(stderr, "L%d: can't add, stack too short\n", num);
+		error(first);
+	}
+	current = *first;
+	sum = current->n + current->next->n;
+	current->next->n = sum;
+	*first = current->next;
+	free(current);
+}
+/**
 *node_add - add new node to double linked list
 *@first: pointer of pointer to the stack
 *@num: integer to be addes
