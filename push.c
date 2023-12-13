@@ -33,5 +33,8 @@ int n, count = 0, checker = 0;
 	else
 		push_error(num, first);
 	n = atoi(args.buf);
-	node_add(first, n);
+	if (args.lilo == 1)
+		node_add(first, n);
+	else
+		queue_add(first, n);
 }

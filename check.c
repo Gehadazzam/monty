@@ -23,6 +23,8 @@ instruction_t func[] = {
 {"mod", stack_mod},
 {"pchar", stack_pchar},
 {"pstr", stack_pstr},
+{"stack", f_stack},
+{"queue", f_queue},
 {NULL, NULL}
 };
 	unsigned int x = 0;

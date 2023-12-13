@@ -15,6 +15,7 @@ typedef struct arguments
 {
 FILE *file;
 char *buf;
+int lilo;
 } args_t;
 extern args_t args;
 
@@ -80,4 +81,7 @@ void stack_mul(stack_t **first, unsigned int num);
 void stack_mod(stack_t **first, unsigned int num);
 void stack_pchar(stack_t **first, unsigned int num);
 void stack_pstr(stack_t **first, unsigned int num);
+
+void f_stack(stack_t **first, unsigned int num);
+void f_queue(stack_t **first, unsigned int num);
 #endif
