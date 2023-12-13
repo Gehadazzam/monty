@@ -1,7 +1,7 @@
 push 2
 push 2
-push 10
-push 3
+push 9
+push 2
 pall
-mul
+mod
 pall
