@@ -12,6 +12,7 @@ int check_func(char *buf, stack_t **stack, unsigned int count, int file_d)
 instruction_t func[] = {
 {"push", mypush},
 {"pall", my_pall},
+{"pint", my_pint},
 {NULL, NULL}
 };
 	unsigned int x = 0;
