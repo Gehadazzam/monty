@@ -37,9 +37,10 @@ void free_all(char *buf, stack_t *stack, args_t *args, FILE *file, int file_d)
 	free(buf);
 	stack_free(stack);
 	close(file_d);
-	fclose(file);
-	/*free_args(args);*/
-	free(args);
+	if (file != NULL)
+		fclose(file);
+	if (args != NULL)
+		free(args);
 	buf = NULL;
 	stack = NULL;
 	args = NULL;

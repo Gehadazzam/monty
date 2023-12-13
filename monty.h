@@ -74,4 +74,5 @@ void error(stack_t **first);
 void f_nop(stack_t **first, unsigned int num);
 
 void f_swap(stack_t **first, unsigned int num);
+void stack_sub(stack_t **first, unsigned int num);
 #endif

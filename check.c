@@ -17,6 +17,7 @@ instruction_t func[] = {
 {"add", stack_add},
 {"nop", f_nop},
 {"swap", f_swap},
+{"sub", stack_sub},
 {NULL, NULL}
 };
 	unsigned int x = 0;

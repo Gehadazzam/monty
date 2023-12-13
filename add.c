@@ -6,15 +6,9 @@
 */
 void stack_add(stack_t **first, unsigned int num)
 {
-	int sum, length = 0;
+	int sum;
 	stack_t *current = *first;
-
-	while (current)
-	{
-		current = current->next;
-		length++;
-	}
-	if (length < 2)
+	if (*first == NULL || first == NULL || (*first)->next == NULL)
 	{
 		fprintf(stderr, "L%d: can't add, stack too short\n", num);
 		error(first);
