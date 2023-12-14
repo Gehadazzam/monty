@@ -4,10 +4,10 @@
 *@buf: pointer
 *@stack: pointer of pointer to the stack
 *@count: unsigned int
-*@file_d: the file open
+*@file: the file open
 *Return: integer
 */
-int check_func(char *buf, stack_t **stack, unsigned int count, int file_d)
+int check_func(char *buf, stack_t **stack, unsigned int count, FILE *file)
 {
 instruction_t func[] = {
 {"push", mypush},
@@ -24,6 +24,8 @@ instruction_t func[] = {
 	unsigned int x = 0;
 	char *function = strtok(buf, " \n\t");
 
+	if (function == NULL)
+		return (0);
 	if (function && function[0] == '#')
 		return (0);
 	args.buf = strtok(NULL, " \n\t");
@@ -39,7 +41,7 @@ instruction_t func[] = {
 	if (function && func[x].opcode == NULL)
 {
 		fprintf(stderr, "L%d: unknown instruction %s\n", count, function);
-		close(file_d), free(args.buf);
+		fclose(file), free(args.buf);
 		stack_free(*stack), exit(EXIT_FAILURE);
 }
 	return (1);

@@ -60,14 +60,14 @@ void queue_add(stack_t **first, int num);
 void stack_add(stack_t **first, unsigned int num);
 
 /*let_free.c*/
-void free_all(char *buf, stack_t *stack, args_t *args, FILE *file, int file_d);
+void free_all(char *buf, stack_t *stack, args_t **args, FILE *file);
 void stack_free(stack_t *first);
 void free_args(args_t *args);
 /*pall.c*/
 void my_pall(stack_t **first, unsigned int num);
 void my_pint(stack_t **first, unsigned int num);
 /*check.c*/
-int check_func(char *buf, stack_t **stack, unsigned int count, int file_d);
+int check_func(char *buf, stack_t **stack, unsigned int count, FILE *);
 /*pop.c*/
 void mypop(stack_t **first, unsigned int num);
 /*error.c*/

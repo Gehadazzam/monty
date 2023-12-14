@@ -30,20 +30,18 @@ stack_t  *current = first;
 *@stack: 2 parameter
 *@args: 3 parameter
 *@file: 4 parameter
-*@file_d: 5 parameter
 */
-void free_all(char *buf, stack_t *stack, args_t *args, FILE *file, int file_d)
+void free_all(char *buf, stack_t *stack, args_t **args, FILE *file)
 {
 	free(buf);
 	stack_free(stack);
-	close(file_d);
 	if (file != NULL)
 		fclose(file);
-	if (args != NULL)
-		free(args);
+	if (*args != NULL)
+		free(*args);
 	buf = NULL;
 	stack = NULL;
-	args = NULL;
+	*args = NULL;
 	file = NULL;
-	file_d = -1;
+	exit(EXIT_FAILURE);
 }
