@@ -11,5 +11,8 @@ void error(stack_t **first)
 		free(args.buf);
 	if (*first != NULL)
 		stack_free(*first);
+	args.file = NULL;
+	args.buf = NULL;
+	*first = NULL;
 	exit(EXIT_FAILURE);
 }

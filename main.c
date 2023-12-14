@@ -27,7 +27,7 @@ args_t *args;
 	if (args == NULL)
 	{
 		fprintf(stderr, "Error: malloc failed\n");
-		fclose(file), exit(EXIT_FAILURE);
+		fclose(file), file = NULL, exit(EXIT_FAILURE);
 	}
 	args->file = file;
 	while (read_line > 0)
@@ -38,5 +38,9 @@ args_t *args;
 			check_func(buf, &stack, count, file);
 }
 	free_all(buf, stack, &args, file);
+	buf = NULL;
+	stack = NULL;
+	args = NULL;
+	file = NULL;
 	return (0);
 }
