@@ -7,7 +7,7 @@
 void f_stack(stack_t **first, unsigned int num)
 {
 (void) num, (void) first;
-args.lilo = 1;
+args.lilo = 0;
 }
 /**
 *f_queue - add as a queue
@@ -17,5 +17,5 @@ args.lilo = 1;
 void f_queue(stack_t **first, unsigned int num)
 {
 (void) num, (void) first;
-args.lilo = 0;
+args.lilo = 1;
 }

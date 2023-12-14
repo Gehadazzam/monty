@@ -30,7 +30,7 @@ int n, count = 0, checker = 0;
 	else
 		push_error(num, first);
 	n = atoi(args.buf);
-	if (args.lilo == 1)
+	if (args.lilo == 0)
 		node_add(first, n);
 	else
 		queue_add(first, n);
