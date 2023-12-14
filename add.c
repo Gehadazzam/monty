@@ -30,7 +30,7 @@ void node_add(stack_t **first, int num)
 {
 stack_t *current, *new_node = malloc(sizeof(stack_t));
 	if (new_node == NULL)
-		printf("Error\n"), exit(0);
+		fprintf(stderr, "Error: malloc failed\n"), exit(EXIT_FAILURE);
 	current = *first;
 	if (current)
 		current->prev = new_node;
@@ -49,20 +49,19 @@ void queue_add(stack_t **first, int num)
 {
 stack_t *current, *new_node = malloc(sizeof(stack_t));
 	if (new_node == NULL)
-		printf("Error\n"), exit(0);
+		fprintf(stderr, "Error: malloc failed\n"), exit(EXIT_FAILURE);
 	current = *first;
 	new_node->n = num;
 	new_node->next = NULL;
-	if (current)
-		while (current)
-			current++;
-	else if (!current)
+	if (current == NULL)
 {
 		*first = new_node;
 		new_node->prev = NULL;
 }
 	else
 {
+		while (current->next != NULL)
+			current = current->next;
 		current->next = new_node;
 		new_node->prev = current;
 }

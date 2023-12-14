@@ -29,10 +29,7 @@ args_t *args;
 }
 	args = malloc(sizeof(args_t));
 	if (args == NULL)
-{
-		fprintf(stderr, "Error: Failed to allocate memory for args\n");
-		exit(EXIT_FAILURE);
-}
+		fprintf(stderr, "Error: malloc failed\n"), exit(EXIT_FAILURE);
 	while (read_line > 0)
 {
 		read_line = getline(&buf, &buf_size, file);

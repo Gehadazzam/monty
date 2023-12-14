@@ -7,7 +7,8 @@
 void push_error(unsigned int num, stack_t **first)
 {
 	fprintf(stderr, "L%d: usage: push integer\n", num);
-	fclose(args.file);
+	if (args.file != NULL)
+		fclose(args.file);
 	free(args.buf);
 	stack_free(*first);
 	exit(EXIT_FAILURE);
