@@ -3,11 +3,11 @@
 *check_func - itrate of the functions
 *@buf: pointer
 *@stack: pointer of pointer to the stack
-*@count: unsigned int
+*@num: unsigned int
 *@file: the file open
 *Return: integer
 */
-int check_func(char *buf, stack_t **stack, unsigned int count, FILE *file)
+int check_func(char *buf, stack_t **stack, unsigned int num, FILE *file)
 {
 instruction_t func[] = {
 {"push", mypush},
@@ -33,15 +33,15 @@ instruction_t func[] = {
 {
 		if (strcmp(function, func[x].opcode) == 0)
 {
-			func[x].f(stack, count);
+			func[x].f(stack, num);
 			return (0);
 }
 		x++;
 }
 	if (function && func[x].opcode == NULL)
 {
-		fprintf(stderr, "L%d: unknown instruction %s\n", count, function);
-		fclose(file), free(args.buf);
+		fprintf(stderr, "L%d: unknown instruction %s\n", num, function);
+		fclose(file), free(args.buf), fclose(args.file);
 		stack_free(*stack), exit(EXIT_FAILURE);
 }
 	return (1);

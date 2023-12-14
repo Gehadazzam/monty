@@ -37,6 +37,8 @@ args_t *args;
 		if (read_line > 0)
 			check_func(buf, &stack, count, file);
 }
+	fclose(args->file);
+	free(args->buf);
 	free_all(buf, stack, &args, file);
 	return (0);
 }

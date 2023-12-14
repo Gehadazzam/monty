@@ -6,7 +6,7 @@ pall
 stack
 push 4
 push 5
-push 1
+push 
 
 pall
 add
