@@ -13,8 +13,8 @@ void my_pall(stack_t **first, unsigned int num)
 stack_t *current = *first;
 (void) num;
 	if (first == NULL)
-		return;
-	while (current)
+		exit(EXIT_FAILURE);
+	while (current != NULL)
 {
 		printf("%d\n", current->n);
 		current = current->next;
