@@ -64,5 +64,5 @@ stack_t *current, *new_node = malloc(sizeof(stack_t));
 			current = current->next;
 		current->next = new_node;
 		new_node->prev = current;
-} 
+}
 }
